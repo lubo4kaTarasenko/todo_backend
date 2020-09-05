@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'api/items', to: 'api/items#index'
   post 'api/items', to: 'api/items#create'
   put 'api/items', to: 'api/items#update'
+  delete 'api/items', to: 'api/items#destroy'
 end
