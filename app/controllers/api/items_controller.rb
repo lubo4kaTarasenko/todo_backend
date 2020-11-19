@@ -11,9 +11,11 @@ class Api::ItemsController < ActionController::API
   end
 
   def update
+pp params
     json = params.permit(:id, :text, :check, :color)
     json = JSON.parse(request.body.read).symbolize_keys if json.empty?
-    result = Item.where(token: params[:token], id: params[:id]).update_all(json.to_h)
+
+    result = Item.where(token: params[:token], id: params[:id] || json[:id]).update_all(json.to_h)
     render json: { result: result }
   end
 

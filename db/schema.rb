@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_05_124625) do
+ActiveRecord::Schema.define(version: 2020_11_17_155658) do
 
   create_table "items", force: :cascade do |t|
     t.string "token"
     t.string "text"
     t.boolean "check"
     t.string "color"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "token"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
