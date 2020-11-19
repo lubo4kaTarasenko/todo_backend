@@ -59,7 +59,7 @@ Response:
 JS example:
 `$.ajax({url: 'http://localhost:3000/api/items', type: 'DELETE', data: {token: 1, id: 10}})`
 
-#Sign_up
+# Sign_up
 Path: POST/auth
 
 Params:
@@ -69,7 +69,7 @@ Params:
 Response:
 `{"token":55785}`
 
-#Log_in
+# Log_in
 Path: PUTS/auth
 
 Params:
