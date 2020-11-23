@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'application#index'
+  get 'api/items', to: 'api/items#index'
+  post 'api/items', to: 'api/items#create'
+  put 'api/items', to: 'api/items#update'
+  delete 'api/items', to: 'api/items#destroy'
+
+  post 'api/auth', to: 'api/auth#sign_up'
+  put 'api/auth', to: 'api/auth#log_in'
 end
